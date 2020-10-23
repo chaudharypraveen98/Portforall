@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html language="en">
+<head>
+    <!-- Load the path to your static files-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}SE{% endblock %}</title>
+    {% load static %}
+{#    <link rel="shortcut icon" type="image/png" href="{% static 'PortfolioApp/images/favicon.ico' %}"/>#}
+    <link rel="stylesheet" type="text/css" href="{% static 'PortfolioApp/style.css' %}">
+    <link rel="stylesheet" href="{% static 'PortfolioApp/css/bootstrap.css' %}">
+    {% block extra_header_links %}{% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'PortfolioApp/js/bootstrap.js' %}"></script>
+    {% block external_script %}{% endblock %}
+</body>
+</html>
