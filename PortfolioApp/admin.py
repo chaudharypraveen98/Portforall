@@ -1,3 +1,4 @@
 from django.contrib import admin
+from .models import UserPortfolioInfo
 
-# Register your models here.
+admin.site.register(UserPortfolioInfo) #Added UserPortfolioInfo Django Admin Dashboard
