@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
 
-from PortfolioApp.forms import LoginForm
+from PortfolioApp.forms import LoginForm, RegisterForm
 
 
 def HelloWorld(request):
@@ -27,3 +27,10 @@ class LoginView(FormView):
                 login(request, user)
                 return redirect('PortfolioApp:HelloWorld')
         return render(request, self.template_name, {"form": form})
+
+
+def signup(request):
+    if request.method == 'post':
+        username = request.POST["username"]
+        password = request.POST["username"]
+        email = request.POST["email"]
