@@ -12,10 +12,12 @@
   background-image:url('images/banner.jpg');
   text-align: center;
   color: #fff;
-  min-height: 600px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -23,7 +25,7 @@
 }
 .banner-heading{
   font-family: 'Satisfy', cursive;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: 700;
   line-height: 100px;
   margin-bottom: 30px;
@@ -34,6 +36,7 @@
     font-size: 50px;
   }
   .banner-sub-heading{
+
     font-size: 30px;}
 }
 .banner-sub-heading{
