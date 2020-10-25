@@ -9,27 +9,38 @@ def HelloWorld(request):
 
 
 class LoginView(FormView):
+    form_class1 = LoginForm
+    form_class2 = SignUpForm
+
     template_name = "PortfolioApp/login.html"
-    form1 = LoginForm(None)
+    form1 = form_class1(None)
     form2 = SignUpForm(None)
 
     def get(self, request, **kwargs):
-        return render(request, self.template_name, {"form": self.form1, "signupform":self.form2})
+        return render(request, self.template_name, {"login_form": self.form1, "signup_form":self.form2})
 
     def post(self, request, **kwargs):
-        form = self.form_class(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('PortfolioApp:HelloWorld')
-        return render(request, self.template_name, {"form": self.form1,"signupform":self.form2})
-
-
-def signup(request):
-    if request.method == 'post':
-        email = request.POST["email"]
-        username = request.POST["username"]
-        password = request.POST["password"]
+        if 'login' in request.POST:
+            form = self.form_class1(request.POST)
+            if form.is_valid():
+                username = form.cleaned_data['username']
+                password = form.cleaned_data['password']
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    login(request, user)
+                    return redirect('PortfolioApp:home')
+            print(form.errors)
+        elif 'signup' in request.POST:
+            form = self.form_class2(request.POST)
+            if form.is_valid():
+                user = form.save(commit=False)
+                username = form.cleaned_data['username']
+                password = form.cleaned_data['password1']
+                print("user created successfully")
+                user.save()
+                user = authenticate(username=username, password=password)
+                if user is not None:
+                    login(request, user)
+                    return redirect('PortfolioApp:home')
+            print(form.errors)
+        return render(request, self.template_name, {"login_form": self.form1, "signup_form":self.form2})
