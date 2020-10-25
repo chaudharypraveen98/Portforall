@@ -1,10 +1,13 @@
-{% extends "PortfolioApp/base.html" %}
-{% block title %}Login{% endblock %}
-{% block album_active %}active{% endblock %}
 {% load static %}
 {% block extra_header_links %}
     <link rel="stylesheet" type="text/css" href="{% static 'PortfolioApp/css/login.css' %}"/>
-{% endblock %} {% block body %}
+{% endblock %}
+{% block body %}
+{#    <section class="head-login">#}
+{#        <div class="head-title">#}
+{#            <h1>Enter the World.</h1>#}
+{#        </div>#}
+{#    </section>#}
     <div class="login-wrap">
         <div class="login-html">
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked/><label

@@ -6,8 +6,8 @@ from . import views
 app_name = 'PortfolioApp'
 
 urlpatterns = [
-    path('', views.HelloWorld, name="HelloWorld"),
+    path('', views.HelloWorld, name="home"),
     path('login/', views.LoginView.as_view(), name='login'),
-    path('signup/', views.signup, name='signup'),
+    path('logout/', views.logout_view, name='logout')
 
 ]

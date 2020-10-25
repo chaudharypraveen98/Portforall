@@ -1,11 +1,17 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
+
 from PortfolioApp.forms import LoginForm, SignUpForm
 
 
 def HelloWorld(request):
-    return render(request, "index.html")
+    return render(request, "PortfolioApp/index.html")
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('PortfolioApp:home')
 
 
 class LoginView(FormView):
@@ -17,7 +23,7 @@ class LoginView(FormView):
     form2 = SignUpForm(None)
 
     def get(self, request, **kwargs):
-        return render(request, self.template_name, {"login_form": self.form1, "signup_form":self.form2})
+        return render(request, self.template_name, {"login_form": self.form1, "signup_form": self.form2})
 
     def post(self, request, **kwargs):
         if 'login' in request.POST:
@@ -43,4 +49,4 @@ class LoginView(FormView):
                     login(request, user)
                     return redirect('PortfolioApp:home')
             print(form.errors)
-        return render(request, self.template_name, {"login_form": self.form1, "signup_form":self.form2})
+        return render(request, self.template_name, {"login_form": self.form1, "signup_form": self.form2})

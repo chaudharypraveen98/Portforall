@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy|Mountains+of+Christmas|Pacifico&display=swap");
+/* NAVBAR */
+.bg-black{
+  background-color: black;
+}
+.navbar{
+  border-radius:0;
+  font-weight: 700;
+}
+/* BANNER IMAGES ON INDEX PAGE */
+.banner{
+  background-image:url('images/banner.jpg');
+  text-align: center;
+  color: #fff;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+.banner-heading{
+  font-family: 'Satisfy', cursive;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 100px;
+  margin-bottom: 30px;
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .banner-heading {
+    font-size: 50px;
+  }
+  .banner-sub-heading{
+    font-size: 30px;}
+}
+.banner-sub-heading{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 50px;
+  color:#fff;
+}
+
+.btn-banner{
+  padding:5px 20px;
+  border-radius:10px;
+  font-weight:700;
+  line-height:1.5;
+  text-align:center;
+  color:#fff;
+  text-transform:uppercase;
+}
+.text-intro{
+  width:90%;
+  margin:auto;
+  text-align:center;
+  padding-top:30px;
+}
+/* footer */
+.footer-area {
+  padding: 30px 0;
+  background-color: #000000;
+  text-align: center;
+  font-size: 12px;
+}
+.footer-area .container .row{
+  display: flex;
+}
+.footer-area .footer-nav li a:hover{
+}
+.footer-area .footer-nav li a {
+  color: #898888;
+  font-size: 16px;
+  text-align: left;
+  padding:0 10px; }
+.footer-area .footer-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.footer-area .copywrite-text {
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #A5A5A5; }
+.footer-area .copywrite-text a {
+  color: #A5A5A5;
+  font-size: 12px; }
+.footer-area .copywrite-text a:hover, .footer-area .copywrite-text a:focus {
+  color: #fff;
+}
+
+.head-login{
+  background-image: url("images/banner.jpg");
+  min-height: 450px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-position: bottom;
+  color: white;
+  justify-content: center;
+}
+
+
+/* banner button */
+.btn-hover {
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+.btn-hover.color-4 {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+.btn-hover.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+.btn-hover.color-6 {
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+.btn-hover.color-7 {
+    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.btn-hover.color-10 {
+        background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+.btn-hover.color-11 {
+       background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
