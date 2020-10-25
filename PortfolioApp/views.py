@@ -9,11 +9,8 @@ def HelloWorld(request):
 
 
 class LoginView(FormView):
-    form_class1 = LoginForm
-    form_class2 = SignUpForm
-
     template_name = "PortfolioApp/login.html"
-    form1 = form_class1(None)
+    form1 = LoginForm(None)
     form2 = SignUpForm(None)
 
     def get(self, request, **kwargs):
@@ -28,7 +25,7 @@ class LoginView(FormView):
             if user is not None:
                 login(request, user)
                 return redirect('PortfolioApp:HelloWorld')
-        return render(request, self.template_name, {"form": form,"signupform":form2})
+        return render(request, self.template_name, {"form": self.form1,"signupform":self.form2})
 
 
 def signup(request):
