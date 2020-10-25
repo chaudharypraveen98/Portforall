@@ -1,8 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.views.generic import FormView
-
-from PortfolioApp.forms import LoginForm, RegisterForm
+from PortfolioApp.forms import LoginForm, SignUpForm
 
 
 def HelloWorld(request):
@@ -10,12 +9,15 @@ def HelloWorld(request):
 
 
 class LoginView(FormView):
-    form_class = LoginForm
+    form_class1 = LoginForm
+    form_class2 = SignUpForm
+
     template_name = "PortfolioApp/login.html"
+    form1 = form_class1(None)
+    form2 = SignUpForm(None)
 
     def get(self, request, **kwargs):
-        form = self.form_class(None)
-        return render(request, self.template_name, {"form": form})
+        return render(request, self.template_name, {"form": self.form1, "signupform":self.form2})
 
     def post(self, request, **kwargs):
         form = self.form_class(request.POST)
@@ -26,11 +28,11 @@ class LoginView(FormView):
             if user is not None:
                 login(request, user)
                 return redirect('PortfolioApp:HelloWorld')
-        return render(request, self.template_name, {"form": form})
+        return render(request, self.template_name, {"form": form,"signupform":form2})
 
 
 def signup(request):
     if request.method == 'post':
-        username = request.POST["username"]
-        password = request.POST["username"]
         email = request.POST["email"]
+        username = request.POST["username"]
+        password = request.POST["password"]
