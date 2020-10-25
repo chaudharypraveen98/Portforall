@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css"
+    />
+    <link rel="stylesheet" href="{% static '/PortfolioApp/style.css' %}">
+    <title>Port4All</title>
+  </head>
+  <body>
+    <section class="cover">
+      <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+          <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Port4All</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+          <ul class="uk-navbar-nav">
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+  </body>
+</html>

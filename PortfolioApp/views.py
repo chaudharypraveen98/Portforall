@@ -17,7 +17,7 @@ class LoginView(FormView):
     form2 = SignUpForm(None)
 
     def get(self, request, **kwargs):
-        return render(request, self.template_name, {"login_form": self.form1, "signup_form":self.form2})
+        return render(request, self.template_name, {"login_form": self.form1, "signup_form": self.form2})
 
     def post(self, request, **kwargs):
         if 'login' in request.POST:
@@ -43,4 +43,4 @@ class LoginView(FormView):
                     login(request, user)
                     return redirect('PortfolioApp:home')
             print(form.errors)
-        return render(request, self.template_name, {"login_form": self.form1, "signup_form":self.form2})
+        return render(request, self.template_name, {"login_form": self.form1, "signup_form": self.form2})
