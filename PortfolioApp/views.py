@@ -50,3 +50,7 @@ class LoginView(FormView):
                     return redirect('PortfolioApp:home')
             print(form.errors)
         return render(request, self.template_name, {"login_form": self.form1, "signup_form": self.form2})
+
+
+def test_view(request):
+    return render(request,'PortfolioApp/template1.html')
