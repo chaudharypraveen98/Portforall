@@ -54,3 +54,7 @@ class LoginView(FormView):
 
 def test_view(request):
     return render(request,'PortfolioApp/template1.html')
+
+def test_view1(request):
+    return render(request,'PortfolioApp/template2.html')
+
