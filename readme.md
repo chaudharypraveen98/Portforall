@@ -10,3 +10,5 @@ This project will make user's portfolio. These portfolio's are dynamic with tons
 
 ##### **Terms and conditions**
 No conditions are applicable. Not a direct or a indirect help is required.
+
+It is a Open source project. You all can edit and modify the project. You are able to use this template anywhere.
