@@ -2,7 +2,7 @@
 This project will make user's portfolio. These portfolio's are dynamic with tons of templates and gradient colours which changes on every refresh. This project is backend with django framework.
 
 <br>
-<img src="PortForAll.png" alt="image portforall">
+<img src="PortForAll.png" alt="image portforall" height="512" width="512">
 <br>
 
 #### **Why Porforall?**
